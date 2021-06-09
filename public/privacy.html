@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" color-mode="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This calculator can be used to calculate the estimated profit of selling an item based on user input and various eBay fees.">
+    <meta name="keywords" content="eBay, eBay Calculator, eBay Profit Calculator, Profit Calculator, Geeked Out Collecting">
+    <meta name="author" content="Jessica Feliciano">
+    <title>Profit Calculator for eBay | Geeked Out Collecting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script defer src="./components/headernav.js" type="text/javascript" defer></script>
+    <script defer src="./components/footer.js" type="text/javascript" defer></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MPCMW2T');</script>
+    <!-- End Google Tag Manager -->
+
+    </head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPCMW2T"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--- Navigation Header -->
+  <header-component></header-component>
+
+
+<br>
+<main class="color-mode" id="main-section">
+  <section class="color-mode__section">
+    <div class="color-mode__container dark--hidden">
+
+    <h3>Privacy Statement</h3>
+<p>Geeked Out Collecting is committed to protecting the privacy and
+accuracy of confidential information to the extent possible, subject to provisions of
+state and federal law.</p>
+<h3>Concerned about privacy? We are too.</h3>
+<p>Although there are many applications and websites that collect information and
+other statistics about their users, we DO NOT collect any personal information
+about you when you visit this web site.</p>
+<h3>What happens if the privacy statement changes?</h3>
+<p>This Privacy Statement was last revised on 3/4/2021. We may change this Privacy
+Statement at any time and for any reason. We encourage you to review this Privacy
+Statement each time you visit the web site.</p>
+<p>If we decide to make a significant change to our Privacy Statement, we will post a
+notice on the homepage of our web site for a period of time after the change is made.</p>
+<h3>What about privacy on other web sites?</h3>
+<p>This web site may contain links to other web sites. Some of those web sites may be
+operated by by third parties. We provide the links for your convenience, but we do
+not review, control, or monitor the privacy practices of web sites operated by
+others.</p>
+<p>We are not responsible for the performance of web sites operated by third parties
+or for your business dealings with them. Therefore, whenever you leave this web
+site we recommend that you review each web site&#39;s privacy practices and make
+your own conclusions regarding the adequacy of these practices.</p>
+<h3>How to contact us</h3>
+<p>If you have questions or comments about this Privacy Statement, please use the following email to reach us:
+Jessica[at]geekedoutcollecting.com<p>
+
+    </div>
+  </section>
+</main>
+
+<!-- Footer Content -->
+<footer-component></footer-component>
+
+
+<!-- Importing Main.js file -->
+  <script src="main.js"></script>
+
+<!-- Allows the toggle to update nav class to active - apart of mobile responsive efforts -->
+  <script id="rendered-js" >
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('nav-links')[0];
+const mainSection = document.getElementsByClassName('color-mode')[0];
+
+toggleButton.addEventListener('click', () => {
+navbarLinks.classList.toggle('active');
+mainSection.classList.toggle('responsive')
+});
+//# sourceURL=pen.js
+</script>
+
+  </body>
+</html>

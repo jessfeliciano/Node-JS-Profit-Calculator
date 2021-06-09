@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" color-mode="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This calculator can be used to calculate the estimated profit of selling an item based on user input and various eBay fees.">
+    <meta name="keywords" content="eBay, eBay Calculator, eBay Profit Calculator, Profit Calculator, Geeked Out Collecting">
+    <meta name="author" content="Jessica Feliciano">
+    <title>Profit Calculator for eBay | Geeked Out Collecting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+    <script defer src="./components/headernav.js" type="text/javascript" defer></script>
+    <script defer src="./components/footer.js" type="text/javascript" defer></script>
+    <script defer src="./js/bgscalculator.js" type="text/javascript" ></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MPCMW2T');</script>
+    <!-- End Google Tag Manager -->
+
+    </head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPCMW2T"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--- Navigation Header -->
+  <header-component></header-component>
+
+
+<br>
+
+<!-- Body Content -->
+<main class="color-mode" id="main-section">
+<section class="color-mode__section" style="width: 750px;">
+  <h1>BGS/ CGC Final Grader</h1>
+  <div class="row" id="calculatorForm" >
+    <div class="col-75">
+      <div class="container">
+        <form>
+          <label for="centering">Centering:</label><br>
+            <input type="text" id="centering" name="centering"><br>
+          <label for="corners">Corners:</label><br>
+            <input type="text" id="corners" name="corners"><br>
+          <label for="edges">Edges:</label><br>
+            <input type="text" id="edges" name="edges"><br>
+          <label for="surfaces">Surfaces:</label><br>
+            <input type="text" id="surfaces" name="surfaces"><br>
+          <button type="button" id="calculationButton" class="button button-block bouncy" onclick="calculator()">Calculate Grade</button>
+          <button type="button" id="resetButton"class="button button-block bouncy" onclick="resetCalculator()" style="animation-delay:0.07s"> Start Over </button>
+        </form>
+      </div>
+    </div>
+    <div class="col-25">
+      <div class="container results">
+        <table style="width:250px;">
+          <tr>
+              <td><h3 class="leftSide">Final Grade: </h3></td>
+              <td><h3 class = "rightSide" id="final-grade"></h3></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+<br>
+  </section>
+</main>
+
+<!-- Footer Content -->
+<footer-component></footer-component>
+
+  </body>
+</html>

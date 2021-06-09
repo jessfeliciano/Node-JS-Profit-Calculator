@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" color-mode="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This calculator can be used to calculate the estimated profit of selling an item based on user input and various eBay fees.">
+    <meta name="keywords" content="eBay, eBay Calculator, eBay Profit Calculator, Profit Calculator, Geeked Out Collecting">
+    <meta name="author" content="Jessica Feliciano">
+    <title>Profit Calculator for eBay | Geeked Out Collecting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script defer src="./components/headernav.js" type="text/javascript" defer></script>
+    <script defer src="./components/footer.js" type="text/javascript" defer></script>
+    <script defer src="./js/main.js" type="text/javascript" ></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MPCMW2T');</script>
+    <!-- End Google Tag Manager -->
+
+    </head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPCMW2T"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--- Navigation Header -->
+  <header-component></header-component>
+
+<main class="color-mode" id="main-section">
+<section class="color-mode__section" style = "width: 1000px;">
+  <h1> Profit Calculator for Ebay </h1>
+  <div class="color-mode__container dark--hidden">
+      <!-- Calculator Form -->
+
+      <!-- Reference documentation for the calculator https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
+      <div class="row" id="calculatorForm">
+        <div class="col-75">
+          <div class="container">
+            <div class="row">
+                <label>Item Name</label></br>
+                <input type="text"id="itemNameInput"><br/>
+              </div>
+                <div class="row pricing">
+                  <div class="col-50">
+                      <label class="cost-listing-labels">Item Cost</label>
+                      <input type="text" class="cost-listing-inputs" id="itemCostInput" required>
+                </div>
+                  <div class="col-50">
+                  <label class="cost-listing-labels">Listing Price</label>
+                  <input type="text" class="cost-listing-inputs" id="listingPriceInput" required>
+                </div>
+              </div>
+              <div class="row shipping">
+                <div class="col-50">
+                  <label>Estimated Shipping Cost</label>
+                  <input type="text" id="estimatedShipping">
+                </div>
+                <div class="col-50">
+                  <label>Shipping Cost to Buyer</label>
+                  <input type="text" id="buyerShippingCost">
+              </div>
+            </div>
+                <label>Item Quantity</label></br>
+                <input type="text" id="quantity"><br><br>
+                <button type="button" id="calculationButton" class="button button-block bouncy" onclick="masterSword()">Calculate Profit</button>
+                <button type="button" id="resetButton"class="button button-block bouncy" onclick="resetCalculator()" style="animation-delay:0.07s"> Start Over </button>
+          </div>
+        </div>
+        <div class="col-25">
+          <div class="container">
+            <div class="row" style = "width: 400px;" id="calculations" >
+              <div class="results">
+                <h2>Results</h2>
+                  <div class="row results">
+                    <div class="col-50">
+                      <h3 class="leftSide">Ebay Fee: </h3>
+                    </div>
+                    <div class="col-50">
+                      <output type="text" id="ebayFee"></output>
+                    </div>
+                  </div>
+                  <div class = "row results">
+                    <div class="col-50">
+                      <h3 class="leftSide">Paypal Fee: </h3>
+                    </div>
+                    <div class="col-50">
+                      <output type="text" id="paypalFeeCalc"></output>
+                    </div>
+                  </div>
+                  <div class = "row results">
+                    <div class="col-50">
+                      <h3 class="leftSide">Your Profit: </h3>
+                    </div>
+                    <div class="col-50">
+                      <output type="text" id="netProfit"></output>
+                    </div>
+                  </div>
+<!--                      <h3 class = "rightSide" id="ebayFee">$8.00</h3>
+                      <h3 class = "rightSide" id="paypalFeeCalc">$2.62</h3>
+                     <h3 class="leftSide">Your Profit: </h3>
+                     <h3 class = "rightSide" id="netProfit">$54.38</h3>-->
+           <div class = "row results">
+             <div class="col-50">
+                <h2 class="leftSide">Your ROI: </h2>
+              </div>
+              <div class="col-50">
+                <output type="text" id="roiPlacement"></output>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <br />
+            <br />
+            <br>
+
+<!-- Start Results Table Content -->
+<div id="tableContainer" class="tableContainer" style="list-style-type:none">
+  <!-- <table border="1" cellpadding="0" cellspacing="0" width="100%" class="scrollTable">
+    <tbody class="scrollContent" id="calculationData">
+      <tr><td>Hello</td></tr>
+    </tbody>
+  </table> -->
+</div>
+<!-- End Results Table Content -->
+
+<!-- Test -->
+<ul id="myList" style="list-style-type:none">
+
+</ul>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- Footer Content -->
+<footer-component></footer-component>
+
+
+
+
+  </body>
+</html>
