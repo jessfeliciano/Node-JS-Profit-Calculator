@@ -1,10 +1,10 @@
 {
-  "name": "geeked-out",
+  "name": "geeked-out-collecting",
   "version": "1.0.0",
   "description": "geeked out collecting tools with node js backend",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [
