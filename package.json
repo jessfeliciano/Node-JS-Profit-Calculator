@@ -1,11 +1,11 @@
 {
   "name": "geeked-out",
   "version": "1.0.0",
-  "description": "node test",
+  "description": "geeked out collecting tools with node js backend",
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon ."
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "node",
